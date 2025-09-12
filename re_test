@@ -11,3 +11,12 @@ print(match1.group())
 greedy_pattern = re.compile(r'<.*>')
 match2 = greedy_pattern.search('<To serve ma> for dinner.>')
 print('greedy is' + match2.group())
+pattern3  = re.compile(r'\d$') #carrots cost dollars
+match3 = pattern3.search('my phone nu,er is: it is 911')
+print(match3)
+pattern4 = re.compile(r'\bcat.*?\b')#\b is for word boundary
+match4 = pattern4.findall('the cat fount a catapult catalog in the catacombes.')
+print (match4)
+pattern5 = re.compile(r'\Bcat\B')#\B matches anything except word boundary
+match5 = pattern5.search('certification')
+print(match5)
