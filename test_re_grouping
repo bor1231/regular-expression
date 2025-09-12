@@ -1,0 +1,12 @@
+import re 
+import pathlib
+phone_re = re.compile(r'(\d{3})-(\d{3}-\d{4})')
+p = pathlib.Path('C:/pyhon codes/website_text.txt')
+text_file = open(p, encoding = 'UTF-8' )
+raw_text = text_file. read()
+match_obj = phone_re.findall(raw_text)
+for first_match in match_obj:
+    print(first_match[0])  # This prints the area code
+    print(first_match[1])
+
+print('End of program.')

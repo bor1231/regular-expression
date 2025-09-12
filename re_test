@@ -1,0 +1,13 @@
+import re 
+pattern = re.compile(r' ..at')
+match_text = pattern.findall (r'he best and worst thing about regular expressions is that they will match exactly what you ask for.')
+print(match_text)
+pattern2 = re.compile(r'wil?\w')
+match_text2 = pattern2.findall(r'he best and worst thing about regular expressions is that they will match exactly what you ask for.')
+print(match_text2)
+lazy_pattern = re.compile(r'<.*?>')
+match1 = lazy_pattern.search('<To serve ma> for dinner.>')
+print(match1.group())
+greedy_pattern = re.compile(r'<.*>')
+match2 = greedy_pattern.search('<To serve ma> for dinner.>')
+print('greedy is' + match2.group())
